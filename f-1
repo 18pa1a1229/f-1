@@ -1,0 +1,12 @@
+def smallestnum (self,n):
+        # code here 
+        l=[int(i) for i in str(n)]
+        l.sort()
+        s=''
+        for i in l:
+            if i!=0:
+                s+=str(i)
+            if len(s)==1:
+                for i in range(l.count(0)):
+                    s+='0'
+        return s
